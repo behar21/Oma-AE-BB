@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bullaku.glimpse",
+  "name": "Glimpse",
+  "version": "1.1.0",
+  "author": "bullaku",
+  "description": "Task-View belegter Workspaces mit Live-Fenstervorschauen und Fenstersuche",
+  "kinds": ["overlay", "bar-widget"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "overlay": "Glimpse.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Glimpse",
+    "description": "Workspace-Übersicht öffnen",
+    "category": "Compositor",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}

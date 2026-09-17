@@ -1,0 +1,10 @@
+#!/bin/sh
+# Howdy face authentication via pam_exec.
+# PAM stacks run as root for sudo/polkit, but as the user for hyprlock;
+# in that case escalate through the dedicated NOPASSWD sudoers rule.
+[ -n "$PAM_USER" ] || exit 1
+if [ "$(id -u)" -eq 0 ]; then
+  exec /usr/bin/python3 /usr/lib/security/howdy/compare.py "$PAM_USER"
+else
+  exec /usr/bin/sudo -n /usr/bin/python3 /usr/lib/security/howdy/compare.py "$PAM_USER"
+fi

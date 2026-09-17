@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "howdy.faceunlock",
+  "name": "Face Unlock",
+  "version": "1.0.0",
+  "author": "bullaku",
+  "description": "Status der Howdy-Gesichtsentsperrung; grau = aktiv, rot = Watcher gestoppt. Klick zeigt die Abdeckung.",
+  "kinds": ["bar-widget"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Face Unlock",
+    "description": "Howdy-Gesichtsentsperrung — Status",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
